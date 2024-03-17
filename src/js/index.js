@@ -41,6 +41,7 @@ function showProductsForCurrentRoute() {
     // Display products
     const displayedProducts = displayProducts(products);
 
+
     // Verify correct products displayed
     console.log('Products displayed:', displayedProducts);
 }
