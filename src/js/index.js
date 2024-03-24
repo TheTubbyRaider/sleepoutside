@@ -1,11 +1,11 @@
-// In index.js  
+// In index.js   
 
-// Populate product templates  
+// Populate product templates   
 function populateProductTemplates(products) {
     // Loop through products to generate HTML
 }
 
-// Display products on page 
+// Display products on page  
 function displayProducts(populatedHtml) {
     // Insert product HTML into DOM
 }
@@ -14,7 +14,7 @@ function displayProducts(populatedHtml) {
 let populatedProductHtml = '';
 
 // In displayProducts()
-displayProducts(populatedProductHtml);
+const displayedProducts = displayProducts(populatedProductHtml);
 
 // In index.js
 try {
@@ -39,8 +39,10 @@ function showProductsForCurrentRoute() {
     const products = //...
 
     // Display products
-    const displayedProducts = displayProducts(products);
+const displayedProducts = displayProducts(products);
 
+
+    showProducts(displayedProducts);
 
     // Verify correct products displayed
     console.log('Products displayed:', displayedProducts);

@@ -21,3 +21,24 @@ export function setClick(selector, callback) {
   });
   qs(selector).addEventListener("click", callback);
 }
+/**
+ * Display alert message at top of page
+ * @param {string} message - Message to display
+ * @param {boolean} scroll - Whether to scroll to top
+ */
+export function showAlert(message, scroll = true) {
+  const alert = document.createElement('div');
+  alert.classList.add('alert');
+  alert.textContent = message;
+
+  document.body.insertAdjacentElement('afterbegin', alert);
+
+  if (scroll) {
+    window.scrollTo(0, 0);
+  }
+}
+try {
+  // call ExternalServices 
+} catch (error) {
+  showAlert(error.message);
+}
